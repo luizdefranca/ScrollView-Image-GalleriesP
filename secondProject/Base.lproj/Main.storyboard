@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TrD-QI-cib">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="C1N-Aa-Uyo">
+            <objects>
+                <viewController id="TrD-QI-cib" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZt-fF-Dw2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-UG-Hxh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="j3w-b8-eq4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="j3w-b8-eq4" firstAttribute="centerX" secondItem="iIW-UG-Hxh" secondAttribute="centerX" id="CnX-Lc-t5s"/>
+                                    <constraint firstItem="j3w-b8-eq4" firstAttribute="top" secondItem="iIW-UG-Hxh" secondAttribute="top" id="KqS-Bl-y31"/>
+                                    <constraint firstItem="j3w-b8-eq4" firstAttribute="leading" secondItem="iIW-UG-Hxh" secondAttribute="leading" id="Qfr-RM-jma"/>
+                                    <constraint firstAttribute="trailing" secondItem="j3w-b8-eq4" secondAttribute="trailing" id="nqj-bQ-ojT"/>
+                                    <constraint firstItem="j3w-b8-eq4" firstAttribute="centerY" secondItem="iIW-UG-Hxh" secondAttribute="centerY" id="odd-72-6Ki"/>
+                                    <constraint firstAttribute="bottom" secondItem="j3w-b8-eq4" secondAttribute="bottom" id="qVH-G9-37d"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="TrD-QI-cib" id="i8q-bx-DJx"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iIW-UG-Hxh" firstAttribute="leading" secondItem="hQR-9J-30O" secondAttribute="leading" id="gVE-eO-Ww0"/>
+                            <constraint firstItem="hQR-9J-30O" firstAttribute="bottom" secondItem="iIW-UG-Hxh" secondAttribute="bottom" id="jOt-14-ySd"/>
+                            <constraint firstItem="iIW-UG-Hxh" firstAttribute="top" secondItem="hQR-9J-30O" secondAttribute="top" id="z6h-os-d4c"/>
+                            <constraint firstItem="hQR-9J-30O" firstAttribute="trailing" secondItem="iIW-UG-Hxh" secondAttribute="trailing" id="zko-eD-nag"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hQR-9J-30O"/>
+                    </view>
+                    <connections>
+                        <outlet property="secondImageView" destination="j3w-b8-eq4" id="g8Y-uM-nyA"/>
+                        <outlet property="secondScrollView" destination="iIW-UG-Hxh" id="QcZ-yG-qcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mru-su-Jq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1764" y="151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pLv-EV-qBx">
+            <objects>
+                <viewController id="2NT-XC-3Oj" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="drh-B5-p1m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGA-w8-D2Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aGA-w8-D2Y" firstAttribute="top" secondItem="drh-B5-p1m" secondAttribute="top" id="5ea-Cw-NTf"/>
+                            <constraint firstItem="aGA-w8-D2Y" firstAttribute="trailing" secondItem="avF-Ze-O5F" secondAttribute="trailing" id="5iF-VI-0us"/>
+                            <constraint firstItem="aGA-w8-D2Y" firstAttribute="leading" secondItem="avF-Ze-O5F" secondAttribute="leading" id="crb-cS-zqa"/>
+                            <constraint firstItem="aGA-w8-D2Y" firstAttribute="bottom" secondItem="drh-B5-p1m" secondAttribute="bottom" id="rYl-2v-P78"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="avF-Ze-O5F"/>
+                    </view>
+                    <connections>
+                        <outlet property="myScrollView" destination="aGA-w8-D2Y" id="LoN-jx-THo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gts-As-JeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="etb-7p-eOy"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="-84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Lighthouse-in-Field" width="960" height="540"/>
+    </resources>
+</document>
