@@ -10,9 +10,9 @@
 
 
 @interface ViewController ()<UIScrollViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
 @property (nonatomic, strong) NSMutableArray<UIImageView*> *imageViewsArray;
-
 @end
 
 @implementation ViewController

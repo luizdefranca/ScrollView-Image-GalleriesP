@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailViewController : UIViewController
 
+
+@property UIImage * passedImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

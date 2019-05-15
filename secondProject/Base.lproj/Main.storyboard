@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TrD-QI-cib">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2NT-XC-3Oj">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="hQR-9J-30O"/>
                     </view>
                     <connections>
-                        <outlet property="secondImageView" destination="j3w-b8-eq4" id="g8Y-uM-nyA"/>
+                        <outlet property="secondImageView" destination="j3w-b8-eq4" id="ZGL-yJ-2nh"/>
                         <outlet property="secondScrollView" destination="iIW-UG-Hxh" id="QcZ-yG-qcu"/>
                     </connections>
                 </viewController>
@@ -58,24 +58,32 @@
             </objects>
             <point key="canvasLocation" x="-1764" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--First Controller-->
         <scene sceneID="pLv-EV-qBx">
             <objects>
-                <viewController id="2NT-XC-3Oj" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2NT-XC-3Oj" customClass="firstController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="drh-B5-p1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGA-w8-D2Y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="epU-dU-Y4d">
+                                <rect key="frame" x="187.5" y="825" width="39" height="37"/>
+                                <connections>
+                                    <action selector="pageControl:" destination="WqH-qq-FEv" eventType="valueChanged" id="A9l-zB-j4d"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="epU-dU-Y4d" firstAttribute="centerX" secondItem="drh-B5-p1m" secondAttribute="centerX" id="1J0-bm-9nS"/>
                             <constraint firstItem="aGA-w8-D2Y" firstAttribute="top" secondItem="drh-B5-p1m" secondAttribute="top" id="5ea-Cw-NTf"/>
                             <constraint firstItem="aGA-w8-D2Y" firstAttribute="trailing" secondItem="avF-Ze-O5F" secondAttribute="trailing" id="5iF-VI-0us"/>
+                            <constraint firstItem="avF-Ze-O5F" firstAttribute="bottom" secondItem="epU-dU-Y4d" secondAttribute="bottom" id="ZhF-ed-iVV"/>
                             <constraint firstItem="aGA-w8-D2Y" firstAttribute="leading" secondItem="avF-Ze-O5F" secondAttribute="leading" id="crb-cS-zqa"/>
                             <constraint firstItem="aGA-w8-D2Y" firstAttribute="bottom" secondItem="drh-B5-p1m" secondAttribute="bottom" id="rYl-2v-P78"/>
                         </constraints>
@@ -83,10 +91,12 @@
                     </view>
                     <connections>
                         <outlet property="myScrollView" destination="aGA-w8-D2Y" id="LoN-jx-THo"/>
+                        <outlet property="pageControl" destination="epU-dU-Y4d" id="pWe-mj-Zrk"/>
+                        <segue destination="TrD-QI-cib" kind="showDetail" identifier="showDetail" id="Tdq-ZN-Z2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gts-As-JeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="etb-7p-eOy"/>
+                <exit id="WqH-qq-FEv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-723" y="-84"/>
         </scene>
